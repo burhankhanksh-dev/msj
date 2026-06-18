@@ -1,48 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>M.S. Jewellers | Elegance Crafted Forever</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSJ | Luxury Jewelry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- BRAND VARIABLES --- */
+        :root {
+            --primary-color: #0B3C26; /* Deep Emerald Green */
+            --accent-color: #D4AF37;  /* Metallic Gold */
+            --text-dark: #222222;     /* Off-Black */
+            --bg-light: #FBFBFA;      /* Luxury Off-White */
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Montserrat', sans-serif;
+        }
+
+        /* --- GLOBAL STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* --- HEADER & NAVIGATION --- */
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #eaeaea;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: 4px;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            background: linear-gradient(rgba(11, 60, 38, 0.6), rgba(11, 60, 38, 0.4)), 
+                        url('https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .hero-content p {
+            font-size: 1rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            color: #f0f0f0;
+        }
+
+        .btn-luxury {
+            display: inline-block;
+            padding: 12px 35px;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-luxury:hover {
+            background-color: #bfa030;
+        }
+
+        /* --- SECTION TITLE --- */
+        .section-title {
+            text-align: center;
+            margin: 60px 0 40px;
+        }
+
+        .section-title h2 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 1px;
+            background-color: var(--accent-color);
+            margin: 15px auto 0;
+        }
+
+        /* --- PRODUCT GRID --- */
+        .product-grid {
+            max-width: 1200px;
+            margin: 0 auto 80px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .product-card {
+            background-color: #ffffff;
+            border: 1px solid #f0f0f0;
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .product-image-wrapper {
+            background-color: #fdfdfd;
+            overflow: hidden;
+            margin-bottom: 20px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-card img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .product-card h3 {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        .product-price {
+            font-size: 0.95rem;
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        /* --- RESPONSIVE DESIGN --- */
+        @media (max-width: 768px) {
+            .nav-links { display: none; } /* Kept simple for raw HTML/CSS setup */
+            .hero-content h1 { font-size: 2.5rem; }
+        }
+    </style>
 </head>
 <body>
 
-<header>
-    <h1>M.S. Jewellers</h1>
-    <p>Elegance Crafted Forever</p>
-</header>
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">MSJ</a>
+            <ul class="nav-links">
+                <li><a href="#">Gold</a></li>
+                <li><a href="#">Diamond</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Our Story</a></li>
+            </ul>
+        </div>
+    </header>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="collections.html">Collections</a>
-    <a href="reviews.html">Reviews</a>
-    <a href="contact.html">Contact</a>
-</nav>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>The Eternal Glow</h1>
+            <p>Handcrafted Gold & Diamond Masterpieces</p>
+            <a href="#" class="btn-luxury">Explore Collection</a>
+        </div>
+    </section>
 
-<section class="hero">
-    <h2>Timeless Beauty, Crafted with Perfection</h2>
-    <p>Premium Gold & Silver Jewellery for Every Occasion.</p>
-    <a href="collections.html">Explore Collection</a>
-</section>
+    <div class="section-title">
+        <h2>Our Timeless Pieces</h2>
+    </div>
 
-<section>
-    <h2>Featured Categories</h2>
-    <ul>
-        <li>Gold Jewellery</li>
-        <li>Silver Jewellery</li>
-        <li>Wedding Collection</li>
-        <li>Rings</li>
-        <li>Chains</li>
-    </ul>
-</section>
+    <section class="product-grid">
+        <div class="product-card">
+            <div class="product-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=500&q=80" alt="Luxury Ring">
+            </div>
+            <h3>Classic Solitaire Diamond Ring</h3>
+            <div class="product-price">₹1,45,000</div>
+        </div>
 
-<footer>
-    <p>© M.S. Jewellers | Batla House, Okhla, New Delhi</p>
-    <p>+91 98112 34802</p>
-</footer>
+        <div class="product-card">
+            <div class="product-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=500&q=80" alt="Luxury Necklace">
+            </div>
+            <h3>Imperial Gold Necklace Set</h3>
+            <div class="product-price">₹4,20,000</div>
+        </div>
 
-<script src="script.js"></script>
+        <div class="product-card">
+            <div class="product-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=500&q=80" alt="Luxury Earrings">
+            </div>
+            <h3>Regal Emerald Drop Earrings</h3>
+            <div class="product-price">₹2,10,000</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 MSJ Jewelry Boutique. Crafted with Perfection.</p>
+    </footer>
+
 </body>
 </html>
