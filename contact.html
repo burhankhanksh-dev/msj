@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect With Us | M.S. Jewellers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { luxuryBlack: '#0d0d0d', luxuryGold: '#D4AF37', glassBg: 'rgba(25, 25, 25, 0.75)' }, fontFamily: { serif: ['Playfair Display', 'serif'], sans: ['Poppins', 'sans-serif'] } } }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-luxuryBlack text-white font-sans overflow-x-hidden">
+
+    <nav class="fixed w-full z-40 bg-luxuryBlack/80 backdrop-blur-md border-b border-luxuryGold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="font-serif text-2xl md:text-3xl font-bold tracking-widest text-luxuryGold">M.S. JEWELLERS</a>
+                <div class="hidden md:block space-x-8 uppercase text-sm tracking-widest">
+                    <a href="index.html" class="hover:text-luxuryGold transition">Home</a>
+                    <a href="about.html" class="hover:text-luxuryGold transition">About</a>
+                    <a href="collections.html" class="hover:text-luxuryGold transition">Collections</a>
+                    <a href="reviews.html" class="hover:text-luxuryGold transition">Reviews</a>
+                    <a href="contact.html" class="text-luxuryGold border-b border-luxuryGold px-1 py-2 font-medium">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-luxuryGold p-2"><i class="fa-solid fa-bars text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden bg-luxuryBlack text-center py-4 tracking-widest space-y-4 text-sm uppercase">
+            <a href="index.html" class="block py-2">Home</a>
+            <a href="about.html" class="block py-2">About</a>
+            <a href="collections.html" class="block py-2">Collections</a>
+            <a href="reviews.html" class="block py-2">Reviews</a>
+            <a href="contact.html" class="block text-luxuryGold py-2">Contact</a>
+        </div>
+    </nav>
+
+    <section class="pt-40 pb-16 text-center bg-gradient-to-b from-[#1a1a1a] to-luxuryBlack">
+        <h1 class="font-serif text-4xl md:text-6xl font-bold tracking-wide mb-4" data-aos="fade-down">Connect With Us</h1>
+        <p class="text-luxuryGold uppercase tracking-[0.2em] text-xs font-light">Visit the Okhla Flagship Showroom</p>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div class="bg-glassBg border border-luxuryGold/20 p-8 rounded-sm" data-aos="fade-right">
+            <h3 class="font-serif text-2xl font-semibold text-luxuryGold mb-6">Send An Enquiry</h3>
+            <form action="#" method="POST" class="space-y-6 text-sm">
+                <div>
+                    <label class="block text-gray-400 mb-2 uppercase tracking-wider text-xs">Full Name</label>
+                    <input type="text" required class="w-full bg-luxuryBlack border border-luxuryGold/20 px-4 py-3 text-white focus:outline-none focus:border-luxuryGold transition rounded-sm">
+                </div>
+                <div>
+                    <label class="block text-gray-400 mb-2 uppercase tracking-wider text-xs">Phone Number</label>
+                    <input type="tel" required class="w-full bg-luxuryBlack border border-luxuryGold/20 px-4 py-3 text-white focus:outline-none focus:border-luxuryGold transition rounded-sm">
+                </div>
+                <div>
+                    <label class="block text-gray-400 mb-2 uppercase tracking-wider text-xs">Your Message Request</label>
+                    <textarea rows="4" required class="w-full bg-luxuryBlack border border-luxuryGold/20 px-4 py-3 text-white focus:outline-none focus:border-luxuryGold transition rounded-sm"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-luxuryGold text-luxuryBlack py-4 font-semibold uppercase tracking-widest hover:bg-white transition shadow-lg">Submit Request</button>
+            </form>
+        </div>
+
+        <div class="space-y-8" data-aos="fade-left">
+            <div class="border-l-4 border-luxuryGold pl-6 space-y-2">
+                <h4 class="text-xs uppercase tracking-[0.2em] text-luxuryGold font-semibold">Location</h4>
+                <p class="text-lg font-light text-gray-200">Batla House, 19/2, Nafees Road, Jamia, Jogabai Extension, Jamia Nagar, Okhla, New Delhi – 110025</p>
+            </div>
+            <div class="border-l-4 border-luxuryGold pl-6 space-y-2">
+                <h4 class="text-xs uppercase tracking-[0.2em] text-luxuryGold font-semibold">Direct Hotlines</h4>
+                <p class="text-xl font-sans font-medium text-white"><a href="tel:+919811234802" class="hover:text-luxuryGold transition">+91 98112 34802</a></p>
+            </div>
+            <div class="border-l-4 border-luxuryGold pl-6 space-y-2">
+                <h4 class="text-xs uppercase tracking-[0.2em] text-luxuryGold font-semibold">Showroom Timings</h4>
+                <p class="text-sm text-gray-300">11:00 AM – 9:00 PM <br><span class="text-luxuryGold text-xs font-normal">Available Throughout the week</span></p>
+            </div>
+            <div class="pt-4 flex gap-4">
+                <a href="tel:+919811234802" class="flex-1 bg-neutral-900 border border-luxuryGold text-luxuryGold text-center py-3 text-xs uppercase tracking-widest font-semibold hover:bg-luxuryGold hover:text-luxuryBlack transition"><i class="fa-solid fa-phone mr-1"></i> Call Now</a>
+                <a href="https://wa.me/919811234802" target="_blank" class="flex-1 bg-emerald-600 text-white text-center py-3 text-xs uppercase tracking-widest font-semibold hover:bg-emerald-700 transition"><i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full h-96 border-t border-luxuryGold/20 mt-12 bg-neutral-900">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.4344445851415!2d77.2831868!3d28.5567087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3fa43df65e1%3A0xe5f1e71239c0bb0c!2sNafees%20Road%2C%20Batla%20House%2C%20Jamia%20Nagar%2C%20Okhla%2C%20New%20Delhi%2C%20Delhi%20110025!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" class="w-full h-full grayscale invert opacity-80 border-none" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <footer class="bg-luxuryBlack border-t border-luxuryGold/20 pt-16 pb-8 text-sm text-gray-400 font-light">
+        <div class="max-w-7xl mx-auto px-4 border-t border-luxuryGold/10 pt-6 text-center text-xs text-gray-500">
+            Copyright &copy; 2026 M.S. Jewellers. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
