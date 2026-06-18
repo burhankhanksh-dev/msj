@@ -1,49 +1,58 @@
-/* Base Reset Rules and Luxury Variables */
-html {
-    scroll-behavior: smooth;
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#0d0d0d;
+    color:white;
 }
 
-/* Custom Scrollbar Configuration */
-::-webkit-scrollbar {
-    width: 8px;
-}
-::-webkit-scrollbar-track {
-    background: #0d0d0d;
-}
-::-webkit-scrollbar-thumb {
-    background: #D4AF37;
-    border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #AA882C;
+header{
+    text-align:center;
+    padding:20px;
+    background:#111;
+    border-bottom:2px solid #D4AF37;
 }
 
-/* Glassmorphism Global Overlays */
-.bg-glassBg {
-    background: rgba(20, 20, 20, 0.65) !important;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+header h1{
+    color:#D4AF37;
+    margin:0;
 }
 
-/* Premium Typography Letter Spacing Extensions */
-.tracking-widest {
-    letter-spacing: 0.15em;
+nav{
+    text-align:center;
+    padding:15px;
 }
 
-/* Interactive Pulsing State for Luxury Accents */
-@keyframes goldPulse {
-    0%, 100% { opacity: 0.4; transform: scale(1); }
-    50% { opacity: 0.9; transform: scale(1.05); }
+nav a{
+    color:#D4AF37;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
 }
 
-/* Filter Item Transitions */
-.gallery-item {
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+.hero{
+    text-align:center;
+    padding:100px 20px;
 }
-.gallery-item.hidden-item {
-    opacity: 0;
-    transform: scale(0.8) translateY(20px);
-    position: absolute;
-    visibility: hidden;
-    pointer-events: none;
+
+.hero h2{
+    color:#D4AF37;
+    font-size:48px;
+}
+
+.hero a{
+    display:inline-block;
+    margin-top:20px;
+    padding:15px 30px;
+    background:#D4AF37;
+    color:black;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111;
+    margin-top:50px;
 }
