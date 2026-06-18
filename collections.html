@@ -1,139 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Premium Collection Vault | M.S. Jewellers</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: { extend: { colors: { luxuryBlack: '#0d0d0d', luxuryGold: '#D4AF37', glassBg: 'rgba(25, 25, 25, 0.75)' }, fontFamily: { serif: ['Playfair Display', 'serif'], sans: ['Poppins', 'sans-serif'] } } }
-        }
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collections - M.S. Jewellers</title>
+<link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-luxuryBlack text-white font-sans overflow-x-hidden">
+<body>
 
-    <nav class="fixed w-full z-40 bg-luxuryBlack/80 backdrop-blur-md border-b border-luxuryGold/20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <a href="index.html" class="font-serif text-2xl md:text-3xl font-bold tracking-widest text-luxuryGold">M.S. JEWELLERS</a>
-                <div class="hidden md:block space-x-8 uppercase text-sm tracking-widest">
-                    <a href="index.html" class="hover:text-luxuryGold transition">Home</a>
-                    <a href="about.html" class="hover:text-luxuryGold transition">About</a>
-                    <a href="collections.html" class="text-luxuryGold border-b border-luxuryGold px-1 py-2 font-medium">Collections</a>
-                    <a href="reviews.html" class="hover:text-luxuryGold transition">Reviews</a>
-                    <a href="contact.html" class="hover:text-luxuryGold transition">Contact</a>
-                </div>
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-luxuryGold p-2"><i class="fa-solid fa-bars text-2xl"></i></button>
-                </div>
-            </div>
-        </div>
-        <div id="mobile-menu" class="hidden bg-luxuryBlack text-center py-4 tracking-widest space-y-4 text-sm uppercase">
-            <a href="index.html" class="block py-2">Home</a>
-            <a href="about.html" class="block py-2">About</a>
-            <a href="collections.html" class="block text-luxuryGold py-2">Collections</a>
-            <a href="reviews.html" class="block py-2">Reviews</a>
-            <a href="contact.html" class="block py-2">Contact</a>
-        </div>
-    </nav>
+<header>
+    <h1>M.S. Jewellers</h1>
+    <p>Elegance Crafted Forever</p>
+</header>
 
-    <section class="pt-40 pb-16 text-center bg-gradient-to-b from-[#1a1a1a] to-luxuryBlack">
-        <h1 class="font-serif text-4xl md:text-6xl font-bold tracking-wide mb-4" data-aos="fade-down">The Premium Vault</h1>
-        <p class="text-luxuryGold uppercase tracking-[0.2em] text-xs font-light">Exquisite Hallmarked Catalogues</p>
-    </section>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="collections.html">Collections</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="contact.html">Contact</a>
+</nav>
 
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div class="flex flex-col md:flex-row gap-6 justify-between items-center bg-glassBg border border-luxuryGold/20 p-6 rounded-md backdrop-blur-sm">
-            <div class="relative w-full md:w-80">
-                <input type="text" id="catalogueSearch" placeholder="Search item catalog..." class="w-full bg-luxuryBlack text-white border border-luxuryGold/30 px-4 py-2 pl-10 rounded-sm focus:outline-none focus:border-luxuryGold transition text-sm">
-                <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-luxuryGold/60 text-sm"></i>
-            </div>
-            <div id="filterTabs" class="flex flex-wrap justify-center gap-3 text-xs uppercase tracking-widest font-medium">
-                <button class="tab-btn px-4 py-2 border border-luxuryGold bg-luxuryGold text-luxuryBlack rounded-sm transition" data-filter="all">All Items</button>
-                <button class="tab-btn px-4 py-2 border border-luxuryGold/30 hover:border-luxuryGold text-white rounded-sm transition" data-filter="gold">Gold</button>
-                <button class="tab-btn px-4 py-2 border border-luxuryGold/30 hover:border-luxuryGold text-white rounded-sm transition" data-filter="silver">Silver</button>
-                <button class="tab-btn px-4 py-2 border border-luxuryGold/30 hover:border-luxuryGold text-white rounded-sm transition" data-filter="wedding">Wedding</button>
-            </div>
-        </div>
+<section class="hero">
+    <h2>Our Collections</h2>
+    <p>Explore our premium jewellery collections.</p>
 
-        <div id="galleryContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="gallery-item group bg-[#111] border border-luxuryGold/10 rounded-sm overflow-hidden transition-all duration-300" data-category="wedding">
-                <div class="relative overflow-hidden h-72">
-                    <img src="https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?q=80&w=500" alt="Royal Wedding Choker" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-luxuryBlack/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <button class="quick-view-btn px-4 py-2 bg-luxuryGold text-luxuryBlack font-semibold text-xs uppercase tracking-wider" data-title="Royal Wedding Choker" data-desc="Exquisite pure heavy 22kt hallmarked bridal standard design." data-img="https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?q=80&w=500">Quick View</button>
-                    </div>
-                </div>
-                <div class="p-5 text-center">
-                    <h3 class="font-serif text-lg text-white mb-1">Royal Wedding Choker</h3>
-                    <p class="text-luxuryGold text-xs tracking-widest uppercase">Wedding Collection</p>
-                </div>
-            </div>
-            <div class="gallery-item group bg-[#111] border border-luxuryGold/10 rounded-sm overflow-hidden transition-all duration-300" data-category="gold">
-                <div class="relative overflow-hidden h-72">
-                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=500" alt="Artisan Gold Kada" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-luxuryBlack/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <button class="quick-view-btn px-4 py-2 bg-luxuryGold text-luxuryBlack font-semibold text-xs uppercase tracking-wider" data-title="Artisan Gold Kada" data-desc="Solid configuration carrying classic filigree elements." data-img="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=500">Quick View</button>
-                    </div>
-                </div>
-                <div class="p-5 text-center">
-                    <h3 class="font-serif text-lg text-white mb-1">Artisan Gold Kada</h3>
-                    <p class="text-luxuryGold text-xs tracking-widest uppercase">Gold Jewellery</p>
-                </div>
-            </div>
-            <div class="gallery-item group bg-[#111] border border-luxuryGold/10 rounded-sm overflow-hidden transition-all duration-300" data-category="silver">
-                <div class="relative overflow-hidden h-72">
-                    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=500" alt="Sterling Silver Drops" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-luxuryBlack/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <button class="quick-view-btn px-4 py-2 bg-luxuryGold text-luxuryBlack font-semibold text-xs uppercase tracking-wider" data-title="Sterling Silver Drops" data-desc="Prismatic 925 sterling silver modular party earrings." data-img="https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=500">Quick View</button>
-                    </div>
-                </div>
-                <div class="p-5 text-center">
-                    <h3 class="font-serif text-lg text-white mb-1">Sterling Silver Drops</h3>
-                    <p class="text-luxuryGold text-xs tracking-widest uppercase">Silver Jewellery</p>
-                </div>
-            </div>
-            <div class="gallery-item group bg-[#111] border border-luxuryGold/10 rounded-sm overflow-hidden transition-all duration-300" data-category="gold">
-                <div class="relative overflow-hidden h-72">
-                    <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=500" alt="Imperial Gold Chain" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-luxuryBlack/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <button class="quick-view-btn px-4 py-2 bg-luxuryGold text-luxuryBlack font-semibold text-xs uppercase tracking-wider" data-title="Imperial Gold Chain" data-desc="Heavy link layered sovereign styling setup for statements." data-img="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=500">Quick View</button>
-                    </div>
-                </div>
-                <div class="p-5 text-center">
-                    <h3 class="font-serif text-lg text-white mb-1">Imperial Gold Chain</h3>
-                    <p class="text-luxuryGold text-xs tracking-widest uppercase">Chains & Necklaces</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <h3>Gold Jewellery</h3>
+    <p>Elegant and timeless gold ornaments.</p>
 
-    <div id="quickViewModal" class="fixed inset-0 bg-luxuryBlack/90 z-50 hidden flex items-center justify-center p-4 backdrop-blur-md">
-        <div class="bg-[#151515] border border-luxuryGold/30 max-w-2xl w-full rounded-md overflow-hidden relative flex flex-col md:flex-row">
-            <button id="closeModal" class="absolute top-4 right-4 text-white hover:text-luxuryGold text-xl"><i class="fa-solid fa-xmark"></i></button>
-            <div class="w-full md:w-1/2 h-64 md:h-auto bg-neutral-900">
-                <img id="modalImg" src="" alt="" class="w-full h-full object-cover">
-            </div>
-            <div class="w-full md:w-1/2 p-8 flex flex-col justify-center">
-                <h3 id="modalTitle" class="font-serif text-2xl font-bold mb-2 text-luxuryGold"></h3>
-                <p id="modalDesc" class="text-sm text-gray-400 font-light mb-6 leading-relaxed"></p>
-                <a href="https://wa.me/919811234802" target="_blank" class="block text-center bg-luxuryGold text-luxuryBlack py-3 font-semibold text-xs uppercase tracking-wider hover:bg-white transition"><i class="fa-brands fa-whatsapp mr-1"></i> Order Consultation</a>
-            </div>
-        </div>
-    </div>
+    <h3>Silver Jewellery</h3>
+    <p>Stylish silver jewellery for every occasion.</p>
 
-    <footer class="bg-luxuryBlack border-t border-luxuryGold/20 pt-16 pb-8 text-sm text-gray-400 font-light">
-        <div class="max-w-7xl mx-auto px-4 border-t border-luxuryGold/10 pt-6 text-center text-xs text-gray-500">
-            Copyright &copy; 2026 M.S. Jewellers. All Rights Reserved.
-        </div>
-    </footer>
+    <h3>Wedding Collection</h3>
+    <p>Exclusive bridal and wedding jewellery sets.</p>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+    <h3>Necklaces</h3>
+    <p>Beautiful necklace designs crafted with perfection.</p>
+
+    <h3>Earrings</h3>
+    <p>Classic and modern earrings.</p>
+
+    <h3>Rings</h3>
+    <p>Designer rings for every style.</p>
+
+    <h3>Chains</h3>
+    <p>Premium quality chains in various styles.</p>
+
+    <h3>Party Wear Collection</h3>
+    <p>Luxury jewellery for parties and special occasions.</p>
+</section>
+
+<footer>
+    <p>© M.S. Jewellers | Batla House, Okhla, New Delhi</p>
+    <p>+91 98112 34802</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
